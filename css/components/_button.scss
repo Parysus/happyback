@@ -1,0 +1,133 @@
+.button {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	font-family: Pacifico, cursive;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 20px;
+	padding: 5px;
+	text-decoration: none;
+	transition: all 0.5s;
+	text-shadow: none;
+	background: none;
+
+	&::after {
+		content: "";
+		transition: all 0.5s;
+		width: 160px;
+		height: 55px;
+		margin-top: -15px;
+		left: 0;
+		mask: url("/images/revs/SVG/undescore_simple.svg") center center / 100% 100% no-repeat;
+		background: black;
+		cursor: pointer;
+	}
+
+	&.light {
+
+		color: $accent;
+
+		&:hover {
+			color: $main-light;
+
+			&::after {
+				background: $main-light;
+			}
+		}
+		
+		&:active {
+			color: $main-dark;
+			transition: none;
+
+			&::after {
+				background: $main-dark;
+				transition: none;
+			}
+		}
+
+		&::after {
+			background: $accent;
+		}
+
+	}
+
+	&.dark {
+		color: $main-dark;
+
+		&:hover {
+			color: white;
+
+			&::after {
+				background: white;
+			}
+		}
+		
+		&:active {
+			color: $accent-dark;
+			transition: none;
+
+			&::after {
+				background: $accent-dark;
+				transition: none;
+			}
+		}
+
+		&::after {
+			background: $main-dark;
+		}
+
+	}
+
+}
+
+// .button {
+// 	display: inline-block;
+// 	margin-top: 20px;
+// 	padding: 20px;
+// 	color: white;
+// 	text-decoration: none;
+// 	border-bottom: 5px solid;
+// 	transition: all 0.5s;
+	
+// 	&:hover {
+// 	margin-top: 17px;
+// 	border-bottom: 8px solid;
+// 	}
+
+// 	&:active {
+// 	transition: none;
+// 	margin-top: 25px;
+// 	border-bottom: 0px solid;
+// 	}
+
+// 	&.light {
+// 	background: $accent;
+// 	border-color: $accent-dark;
+
+// 		&:hover {
+// 			border-color: $accent-dark;
+// 		}
+
+// 		&:active {
+// 			border-color: $accent-dark;
+// 		}
+
+// 	}
+
+// 	&.dark {
+// 	background: $main-light;
+// 	border-color: $main-dark;
+
+// 		&:hover {
+// 			border-color: $main-dark;
+// 		}
+		
+// 		&:active {
+// 			border-color: $main-dark;
+// 		}
+
+// 	}
+
+// }

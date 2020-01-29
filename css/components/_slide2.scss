@@ -1,0 +1,76 @@
+.about {
+	background-color: $light-bg;
+}
+
+.spec_container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-around;
+	padding-top: 40px;
+}
+
+.spec {
+	width: 100%;
+	max-width: 340px;
+	padding: 20px;
+	text-align: center;
+	position: relative;
+	margin-top: -50px;
+}
+
+.spec_picture {
+	$size: 200px;
+	$offset: 70px;
+
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+	height: $size;
+	width: $size;
+	margin-bottom: 3em;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		background: $main-light;
+		mask: url("/images/revs/SVG/colar_leaf.svg") center center/ 100% 100%;
+		height: $size + $offset;
+		width: $size + $offset;
+		transform: translate(-$offset / 2, -$offset / 2);
+	}
+
+}
+
+.spec_desc {
+	h2 {
+		font-family: Pacifico, cursive;
+		font-size: 1.7em;
+		margin-bottom: 1em;
+
+	}
+	
+	p {
+		text-align: left;
+		line-height: 1.4em;
+		letter-spacing: 0.02em;
+		text-indent: 3em;
+
+		&::after {
+			content: "";
+			background: $main-light;
+			mask: url("/images/revs/SVG/twopointsunderline.svg") 0 0/ 100% 100%;
+			display: block;
+			width: 200px;
+			margin: auto;
+			margin-top: 10px;
+			height: 60px;
+		}
+	}
+}

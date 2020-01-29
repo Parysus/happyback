@@ -1,0 +1,23 @@
+.container {
+	margin: auto;
+	display: flex;
+	width: calc(100% - 140px);
+	height: 100%;
+	position: relative;
+	z-index: 1000;
+}
+
+.content {
+	padding: 20px;
+}
+
+.section {
+	background: white;
+
+	.container {
+		padding-top: 60px;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+}

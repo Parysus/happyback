@@ -1,0 +1,79 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+form {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-content: space-between;
+}
+
+form > * {
+	flex-grow: 1;
+}
+
+label{
+	display: flex;
+	flex-direction: column;
+
+}
+
+.price {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	max-width: 40%;
+	overflow: hidden;
+
+	#amountForm {
+		width: 100px;
+		font-size: 2em;
+		text-align: center;
+	}
+}
+
+.buyer_info {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-right: 50px;
+}
+
+input {
+	margin-bottom: 1em;
+	background-color: $light-bg;
+	border: none;
+	padding: 5px;
+	font-size: 1.2em;
+
+	&:focus {
+		background-color: $accent-light;
+		color: white;
+	}
+}
+
+#submitForm {
+	margin: 0;
+	border: 0;
+}
+
+label {
+	padding: 0.2em 0;
+	font-size: 0.9em;
+}
+
+.price>span {
+	padding-bottom: 40px;
+	font-size: 2em;
+	display: block;
+}
+#price {
+	font-family: 'Pacifico', cursive;
+	font-size: 2em;
+	color: $accent;
+}

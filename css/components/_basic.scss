@@ -1,0 +1,27 @@
+html {
+	box-sizing: border-box;
+	text-size-adjust: 100%;
+}
+
+body:after {
+	content: '';
+	clear: both;
+}
+
+html,
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-family: 'Hind', sans-serif;
+	font-size: 14px;
+	color: $main-light;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+	font-family: inherit;
+}
+
